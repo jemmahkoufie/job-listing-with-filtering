@@ -248,8 +248,8 @@
             }
 
             //Hide filters when no filter is selected
-            if ($filteredData.length == 0) {
-                renderProfiles($profileData)
+            if ($filteredData.length === 0) {
+                renderProfiles($profileData.reverse())
                 $('.filters').hide()
             }
 
@@ -258,7 +258,7 @@
                 if ($filteredData.length == 0) {
                     $filteredData = $profileData.filter(filterData => filterData.role === $(event.currentTarget).html().trim())
                     active_filters.role = $(event.currentTarget).html().trim()
-                    $('#filterItemBox').append(`<li class="filterItem"><p>${$(event.currentTarget).html().trim()}</p> <span id='removeRole'>X</span></li>`)
+                    $('#filterItemBox').append(`<li class="filterItem"><p>${$(event.currentTarget).html().trim()}</p><span id='removeRole'>X</span></li>`)
                     $('.filters').show()
                     renderProfiles($filteredData)
                 
@@ -280,7 +280,7 @@
                 if ($filteredData.length === 0) {
                     $filteredData = $profileData.filter(filterData => filterData.level === $(event.currentTarget).html().trim())
                     active_filters.level = $(event.currentTarget).html().trim()
-                    $('#filterItemBox').append(`<li class="filterItem"><p>${$(event.currentTarget).html().trim()}</p> <span id='removeLevel'>X</span></li>`)
+                    $('#filterItemBox').append(`<li class="filterItem"><p>${$(event.currentTarget).html().trim()}</p><span id='removeLevel'>X</span></li>`)
                     $('.filters').show()
                     renderProfiles($filteredData)
                 } else {
@@ -288,7 +288,7 @@
                     if (!(active_filters.level === $(event.currentTarget).html().trim())) {
                         active_filters.level = $(event.currentTarget).html().trim()
                         $('.filters').show()
-                        $('#filterItemBox').append(`<li class="filterItem"><p>${$(event.currentTarget).html().trim()}</p> <span id='removeLevel'>X</span></li>`)
+                        $('#filterItemBox').append(`<li class="filterItem"><p>${$(event.currentTarget).html().trim()}</p><span id='removeLevel'>X</span></li>`)
                     }
                     renderProfiles($filteredData)
                 }
@@ -305,7 +305,7 @@
                     if (!(active_filters.languages.includes($(event.currentTarget).html().trim()))) {
                         active_filters.languages.push($(event.currentTarget).html().trim())
                             ('.filters').show()
-                        $('#filterItemBox').append(`<li class="filterItem"><p>${$(event.currentTarget).html().trim()}</p> <span id='removeLanguage'>X</span></li>`)
+                        $('#filterItemBox').append(`<li class="filterItem"><p>${$(event.currentTarget).html().trim()}</p><span id='removeLanguage'>X</span></li>`)
                     }
 
 
