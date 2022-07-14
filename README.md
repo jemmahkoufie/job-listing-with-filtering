@@ -5,7 +5,7 @@ Displays available job listings together with a filters, making it easy for user
 
  Is in its first phase, it's currently an HTML,CSS and JavaScript template for an application meant to 
  help applicant to view available job opportunities based on their skill sets. It is responsive and runs smoothly on both desktop and mobile devices.
- [live preview](https://jemmahkoufie.github.io/Clipboard-landing-page/) 
+ [live preview](https://jemmahkoufie.github.io/job-listing-with-filtering/) 
 
  ## Interface
  ### DEsktop Design
